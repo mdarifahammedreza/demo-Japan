@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "filename": "/Data/Image/Curosol/1.png",
+    "heading": "Melting Glaciers",
+    "summary": "Rising global temperatures are causing glaciers to melt at an alarming rate, contributing to rising sea levels and loss of freshwater sources."
+  },
+  {
+    "id": 2,
+    "filename": "/Data/Image/Curosol/2.png",
+    "heading": "Rising Sea Levels",
+    "summary": "Climate change is accelerating polar ice melt, leading to rising sea levels that threaten coastal communities and ecosystems."
+  },
+  {
+    "id": 3,
+    "filename": "/Data/Image/Curosol/3.png",
+    "heading": "Wildfires and Heatwaves",
+    "summary": "Increased global temperatures are fueling more frequent and intense wildfires, especially in dry regions, impacting both air quality and biodiversity."
+  },
+  {
+    "id": 4,
+    "filename": "/Data/Image/Curosol/4.png",
+    "heading": "Extreme Weather Events",
+    "summary": "Climate change intensifies storms, floods, and droughts, causing widespread damage and threatening food and water security."
+  },
+  {
+    "id": 5,
+    "filename": "/Data/Image/Curosol/5.png",
+    "heading": "Coral Bleaching",
+    "summary": "Warmer oceans are leading to coral bleaching events, destroying marine habitats and affecting fisheries that depend on coral reefs."
+  },
+  {
+    "id": 6,
+    "filename": "/Data/Image/Curosol/6.png",
+    "heading": "Carbon Emissions",
+    "summary": "The burning of fossil fuels continues to release large amounts of CO₂ into the atmosphere, driving the greenhouse effect and climate change."
+  }
+]
