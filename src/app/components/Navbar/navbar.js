@@ -106,6 +106,20 @@ export default function Navbar() {
         >
           Props
         </Link>
+        <Link
+          href="/climate"
+          onClick={handleLinkClick}
+          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+        >
+          climate
+        </Link>
+        <Link
+          href="/climate/info"
+          onClick={handleLinkClick}
+          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+        >
+          climate info
+        </Link>
       </nav>
 
       {/* Overlay backdrop */}

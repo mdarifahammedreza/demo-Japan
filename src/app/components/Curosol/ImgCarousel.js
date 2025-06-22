@@ -107,7 +107,7 @@ export default function ImgCarousel() {
 
         {/* Text under carousel */}
         {images[active] && (
-          <div className="mt-10 max-w-2xl text-center space-y-4">
+          <div className="mt-10 max-w-2xl text-center space-y-4 bg-transparent border-2 border-teal-400 shadow-2xl px-10 py-3 rounded-3xl">
             <h1 className="text-2xl sm:text-3xl font-bold text-emerald-800">
               {images[active].heading}
             </h1>
