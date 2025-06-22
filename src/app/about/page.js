@@ -23,7 +23,7 @@ export default function AboutPage() {
         </blockquote>
         <article className="bg-white rounded-2xl shadow-md p-8 flex flex-col">
           <h2 className="text-3xl font-semibold text-emerald-700 mb-4 flex items-center gap-3">
-            <span>🌱</span> Why Climate Change Matters
+             Why Climate Change Matters
           </h2>
           <p className="text-gray-700 leading-relaxed flex-grow">
             Climate change is not a distant threat—it&rsquo;s happening now. Rising
@@ -35,7 +35,7 @@ export default function AboutPage() {
 
         <article className="bg-white rounded-2xl shadow-md p-8 flex flex-col">
           <h2 className="text-3xl font-semibold text-emerald-700 mb-4 flex items-center gap-3">
-            <span>📊</span> What We Do
+             What We Do
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 leading-relaxed flex-grow">
             <li>
@@ -52,7 +52,7 @@ export default function AboutPage() {
 
         <article className="bg-white rounded-2xl shadow-md p-8 flex flex-col">
           <h2 className="text-3xl font-semibold text-emerald-700 mb-4 flex items-center gap-3">
-            <span>🌍</span> Our Vision
+             Our Vision
           </h2>
           <p className="text-gray-700 leading-relaxed flex-grow">
             We envision a world where humanity lives in harmony with nature —
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
         <article className="bg-white rounded-2xl shadow-md p-8 flex flex-col">
           <h2 className="text-3xl font-semibold text-emerald-700 mb-4 flex items-center gap-3">
-            <span>🤝</span> Get Involved
+             Get Involved
           </h2>
           <p className="text-gray-700 leading-relaxed flex-grow">
             Whether you’re a student, researcher, artist, or business owner —
