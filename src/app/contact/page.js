@@ -20,10 +20,10 @@ export default function Page() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-tr from-green-100 via-white to-blue-100 text-gray-900 px-6 py-20">
+    <main className="min-h-screen bg-gradient-to-tr from-emerald-100 via-white to-blue-100 text-emerald-900 px-6 py-20">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h1 className="text-5xl font-extrabold text-green-800 tracking-tight mb-3 drop-shadow-md">
+          <h1 className="text-5xl font-extrabold text-emerald-800 tracking-tight mb-3 drop-shadow-md">
             Get in Touch
           </h1>
           <p className="text-lg text-gray-700 max-w-xl mx-auto">
@@ -34,15 +34,15 @@ export default function Page() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Column: Contact Info */}
           <div className="space-y-10 bg-white rounded-3xl p-10 shadow-xl border border-green-200">
-            <ContactItem icon={<MapPin className="w-7 h-7 text-green-600 animate-pulse" />} title="Our Office">
+            <ContactItem icon={<MapPin className="w-7 h-7 text-emerald-600 animate-pulse" />} title="Our Office">
               123 Greenway Lane<br />Eco City, Earth 1010
             </ContactItem>
 
-            <ContactItem icon={<Phone className="w-7 h-7 text-green-600 animate-pulse delay-75" />} title="Phone">
+            <ContactItem icon={<Phone className="w-7 h-7 text-emerald-600 animate-pulse delay-75" />} title="Phone">
               +1 (800) 123-4567
             </ContactItem>
 
-            <ContactItem icon={<Mail className="w-7 h-7 text-green-600 animate-pulse delay-150" />} title="Email">
+            <ContactItem icon={<Mail className="w-7 h-7 text-emerald-600 animate-pulse delay-150" />} title="Email">
               contact@climateaware.org
             </ContactItem>
 
@@ -58,7 +58,7 @@ export default function Page() {
 
           {/* Right Column: Contact Form */}
           <form
-            className="bg-white rounded-3xl p-10 shadow-xl border border-green-200 flex flex-col gap-6"
+            className="bg-white rounded-3xl p-10 shadow-xl border border-emerald-200 flex flex-col gap-6"
             onSubmit={handleSubmit}
           >
             <InputField label="Full Name" id="name" type="text" placeholder="John Doe" required />
@@ -67,7 +67,7 @@ export default function Page() {
 
             <button
               type="submit"
-              className="mt-4 bg-green-600 text-white font-semibold py-3 rounded-2xl shadow-md hover:bg-green-700 transition"
+              className="mt-4 bg-emerald-600 text-white font-semibold py-3 rounded-2xl shadow-md hover:bg-emerald-700 transition"
             >
               Send Message
             </button>
@@ -86,7 +86,7 @@ function ContactItem({ icon, title, children }) {
     <div className="flex gap-5 items-start">
       <div className="flex-shrink-0">{icon}</div>
       <div>
-        <h4 className="text-lg font-semibold text-green-800 mb-1">{title}</h4>
+        <h4 className="text-lg font-semibold text-emerald-800 mb-1">{title}</h4>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">{children}</p>
       </div>
     </div>
@@ -114,7 +114,7 @@ function InputField({ label, id, type = 'text', placeholder, as = 'input', rows,
         rows={rows}
         placeholder={placeholder}
         required={required}
-        className="resize-none px-5 py-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-4 focus:ring-green-300 transition"
+        className="resize-none px-5 py-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald-300 transition"
       />
     </div>
   );

@@ -71,7 +71,7 @@ export default function Navbar() {
       {/* Sidebar drawer */}
       <nav
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full w-64 bg-green-950 border-r border-green-500 shadow-lg p-4 flex flex-col gap-4 transition-transform duration-300 ease-in-out z-[999] ${
+        className={`fixed top-0 left-0 h-full w-64 bg-emerald-950 border-r border-emerald-500 shadow-lg p-4 flex flex-col gap-4 transition-transform duration-300 ease-in-out z-[999] ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -81,42 +81,42 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={handleLinkClick}
-          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+          className="rounded-md px-4 py-2 hover:bg-emerald-800 text-gray-100 transition-colors"
         >
           Home
         </Link>
         <Link
           href="/about"
           onClick={handleLinkClick}
-          className="rounded-md px-4 py-2  hover:bg-green-800 text-gray-100 transition-colors"
+          className="rounded-md px-4 py-2  hover:bg-emerald-800 text-gray-100 transition-colors"
         >
           About
         </Link>
         <Link
           href="/contact"
           onClick={handleLinkClick}
-          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+          className="rounded-md px-4 py-2 hover:bg-emerald-800 text-gray-100 transition-colors"
         >
           Contact
         </Link>
         <Link
           href="/props"
           onClick={handleLinkClick}
-          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+          className="rounded-md px-4 py-2 hover:bg-emerald-800 text-gray-100 transition-colors"
         >
           Props
         </Link>
         <Link
           href="/climate"
           onClick={handleLinkClick}
-          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+          className="rounded-md px-4 py-2 hover:bg-emerald-800 text-gray-100 transition-colors"
         >
           climate
         </Link>
         <Link
           href="/climate/info"
           onClick={handleLinkClick}
-          className="rounded-md px-4 py-2 hover:bg-green-800 text-gray-100 transition-colors"
+          className="rounded-md px-4 py-2 hover:bg-emerald-800 text-gray-100 transition-colors"
         >
           climate info
         </Link>

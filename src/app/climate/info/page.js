@@ -50,17 +50,17 @@ export default function ClimateReportsList() {
     }
   }
 
-  if (loading) return <p className="text-teal-700 p-6">Loading reports...</p>;
+  if (loading) return <p className="text-emerald-700 p-6">Loading reports...</p>;
   if (error) return <p className="text-red-600 p-6">Error: {error}</p>;
 
   return (
-    <dev className="min-h-screen w-full bg-teal-50 flex flex-col items-center p-4 md:p-8 overflow-auto">
-      <h2 className="text-4xl font-extrabold mb-8 text-teal-900 max-w-4xl w-full text-center">
+    <dev className="min-h-screen w-full bg-emerald-50 flex flex-col items-center p-4 md:p-8 overflow-auto">
+      <h2 className="text-4xl font-extrabold mb-8 text-emerald-900 max-w-4xl w-full text-center">
         Climate Change Reports
       </h2>
 
       {reports.length === 0 && (
-        <p className="text-teal-700 text-lg max-w-4xl w-full text-center">No reports found.</p>
+        <p className="text-emerald-700 text-lg max-w-4xl w-full text-center">No reports found.</p>
       )}
 
       <ul className="space-y-6 max-w-4xl w-full">
@@ -70,16 +70,16 @@ export default function ClimateReportsList() {
             className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row justify-between items-start"
           >
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold text-teal-900">{report.title}</h3>
-              <p className="text-teal-700 mt-1 mb-2">
+              <h3 className="text-2xl font-semibold text-emerald-900">{report.title}</h3>
+              <p className="text-emerald-700 mt-1 mb-2">
                 <strong>Region:</strong> {report.region} | <strong>Type:</strong> {report.type}
               </p>
-              <p className="text-teal-700 mb-2">
+              <p className="text-emerald-700 mb-2">
                 <strong>Temp Change:</strong> {report.temperatureChange}°C |{" "}
                 <strong>CO₂ ppm:</strong> {report.co2ppm}
               </p>
-              <p className="text-teal-700 mb-3">{report.description}</p>
-              <p className="text-sm text-teal-600 italic">
+              <p className="text-emerald-700 mb-3">{report.description}</p>
+              <p className="text-sm text-emerald-600 italic">
                 Date: {new Date(report.date).toLocaleDateString()}
               </p>
             </div>

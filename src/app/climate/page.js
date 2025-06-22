@@ -117,10 +117,10 @@ export default function ClimateReportsPage() {
       {/* Toast container */}
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
 
-      <main className="min-h-screen w-full bg-teal-50 p-4 md:p-10 flex flex-col md:flex-row md:items-start md:justify-center gap-8">
+      <main className="min-h-screen w-full bg-emerald-50 p-4 md:p-10 flex flex-col md:flex-row md:items-start md:justify-center gap-8">
         {/* Submission form */}
         <section className="w-full max-w-md bg-white p-6 rounded-md shadow-md flex-shrink-0">
-          <h2 className="text-2xl font-semibold mb-6 text-teal-800 text-center">
+          <h2 className="text-2xl font-semibold mb-6 text-emerald-800 text-center">
             Submit Climate Report
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -150,7 +150,7 @@ export default function ClimateReportsPage() {
             <button
               type="submit"
               disabled={loadingForm}
-              className="w-full py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition"
+              className="w-full py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition"
             >
               {loadingForm ? "Submitting..." : "Submit Report"}
             </button>
@@ -159,31 +159,31 @@ export default function ClimateReportsPage() {
 
         {/* Reports list */}
         <section className="w-full max-w-4xl bg-white p-6 rounded-md shadow-md">
-          <h2 className="text-3xl font-bold mb-6 text-teal-800 text-center">Climate Change Reports</h2>
+          <h2 className="text-3xl font-bold mb-6 text-emerald-800 text-center">Climate Change Reports</h2>
 
-          {loadingList && <p className="text-teal-700 text-center">Loading reports...</p>}
+          {loadingList && <p className="text-emerald-700 text-center">Loading reports...</p>}
           {error && <p className="text-red-600 text-center">Error: {error}</p>}
           {!loadingList && reports.length === 0 && (
-            <p className="text-teal-700 text-center">No reports found.</p>
+            <p className="text-emerald-700 text-center">No reports found.</p>
           )}
 
           <ul className="space-y-6">
             {reports.map((report) => (
               <li
                 key={report._id}
-                className="bg-teal-50 p-4 rounded-md shadow flex flex-col md:flex-row justify-between items-start"
+                className="bg-emerald-50 p-4 rounded-md shadow flex flex-col md:flex-row justify-between items-start"
               >
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-teal-900">{report.title}</h3>
-                  <p className="text-teal-700 mt-1 mb-2">
+                  <h3 className="text-xl font-semibold text-emerald-900">{report.title}</h3>
+                  <p className="text-emerald-700 mt-1 mb-2">
                     <strong>Region:</strong> {report.region} | <strong>Type:</strong> {report.type}
                   </p>
-                  <p className="text-teal-700 mb-2">
+                  <p className="text-emerald-700 mb-2">
                     <strong>Temp Change:</strong> {report.temperatureChange}°C |{" "}
                     <strong>CO₂ ppm:</strong> {report.co2ppm}
                   </p>
-                  <p className="text-teal-700 mb-3">{report.description}</p>
-                  <p className="text-sm text-teal-600 italic">
+                  <p className="text-emerald-700 mb-3">{report.description}</p>
+                  <p className="text-sm text-emerald-600 italic">
                     Date: {new Date(report.date).toLocaleDateString()}
                   </p>
                 </div>
@@ -207,14 +207,14 @@ export default function ClimateReportsPage() {
 function Input({ label, name, type = "text", value, onChange, required }) {
   return (
     <label className="block">
-      <span className="text-teal-700 font-medium">{label}</span>
+      <span className="text-emerald-700 font-medium">{label}</span>
       <input
         type={type}
         name={name}
         value={value}
         onChange={onChange}
         required={required}
-        className="mt-1 block w-full rounded-md border border-teal-300 bg-white px-3 py-2 shadow-sm placeholder-teal-400 focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+        className="mt-1 block w-full rounded-md border border-emerald-300 bg-white px-3 py-2 shadow-sm placeholder-emerald-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
       />
     </label>
   );
@@ -223,14 +223,14 @@ function Input({ label, name, type = "text", value, onChange, required }) {
 function Textarea({ label, name, value, onChange, required }) {
   return (
     <label className="block">
-      <span className="text-teal-700 font-medium">{label}</span>
+      <span className="text-emerald-700 font-medium">{label}</span>
       <textarea
         name={name}
         value={value}
         onChange={onChange}
         required={required}
         rows={4}
-        className="mt-1 block w-full rounded-md border border-teal-300 bg-white px-3 py-2 shadow-sm placeholder-teal-400 focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+        className="mt-1 block w-full rounded-md border border-emerald-300 bg-white px-3 py-2 shadow-sm placeholder-emerald-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
       />
     </label>
   );

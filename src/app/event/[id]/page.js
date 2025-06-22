@@ -12,9 +12,7 @@ export default function Page(asyncParams) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/Data/Image/Curosol/image.json", {
-          cache: "no-store",
-        });
+        const res = await fetch("/Data/Image/Curosol/image.json");
 
         if (!res.ok) throw new Error("Failed to fetch image data");
 
@@ -43,7 +41,7 @@ export default function Page(asyncParams) {
       <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-50">
         <h1 className="text-3xl font-bold text-emerald-700 mb-4">{img.heading}</h1>
 
-        <div className="relative w-[300px] h-[400px] sm:w-[400px] sm:h-[500px] border-2 border-teal-500 rounded-xl shadow-lg overflow-hidden">
+        <div className="relative w-[300px] h-[400px] sm:w-[400px] sm:h-[500px] border-2 border-emerald-500 rounded-xl shadow-lg overflow-hidden">
           <Image
             src={img.filename}
             alt={img.heading}
