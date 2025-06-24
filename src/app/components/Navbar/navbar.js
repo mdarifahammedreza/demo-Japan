@@ -58,13 +58,16 @@ export default function Navbar() {
     <div>
       {/* Top bar with toggle buttons */}
       
-        <button
+       <section className="flex  items-center w-full bg-emerald-950 p-2 text-2xl    text-white dark:text-gray-100 fixed top-0 z-[100]">
+       <button
   onClick={() => setIsOpen(!isOpen)}
   aria-label="Toggle sidebar"
-  className={`text-2xl p-2 bg-green-950  rounded text-white dark:text-gray-100 fixed top-5 right-5 z-[100] ${hide}`}
+  className={`text-2xl p-2 bg-green-950  rounded text-white dark:text-gray-100 z-[100] ${hide}`}
 >
   ☰
 </button>
+<h1 className="text-2xl font-bold">ModernSite</h1>
+       </section>
 
       
 

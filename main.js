@@ -1,6 +1,6 @@
-// main.js
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const isDev = require('electron-is-dev'); // install with: npm install electron-is-dev
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -8,17 +8,17 @@ function createWindow() {
     height: 800,
     webPreferences: {
       contextIsolation: true,
+      preload: path.join(__dirname, 'preload.js')
     },
   });
 
-const startUrl = isDev
-  ? 'http://localhost:3000'
-  : `file://${path.join(__dirname, 'out/index.html')}`;
-
+  const startUrl = isDev
+    ? 'http://localhost:3000' // if running Next.js in dev mode
+    : `file://${path.join(__dirname, 'out/index.html')}`; // from `next export`
 
   win.loadURL(startUrl);
 
-  if (process.env.NODE_ENV === 'development') {
+  if (isDev) {
     win.webContents.openDevTools();
   }
 }
@@ -28,3 +28,5 @@ app.whenReady().then(createWindow);
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
+ipcMain.handle('ping', () => 'pong');

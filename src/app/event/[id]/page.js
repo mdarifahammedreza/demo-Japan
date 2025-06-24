@@ -1,57 +1,27 @@
-"use client";
-
+import ImageView from "@/app/components/ImageView";
 import Private from "@/app/components/Private/private";
-import Image from "next/image";
-import { use, useEffect, useState } from "react"; // required to unwrap async params
+import fs from "fs";
+import path from "path";
 
-export default function Page(asyncParams) {
-  const { id } = use(asyncParams.params); // ✅ unwrap the async `params`
+export async function generateStaticParams() {
+  const filePath = path.join(process.cwd(), 'public/Data/Image/Curosol/image.json');
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
-  const [img, setImg] = useState(null);
+  return data.map((item) => ({
+    id: item.id.toString(),
+  }));
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/Data/Image/Curosol/image.json");
+export default async function Page({ params }) {
+  const { id } = params;
 
-        if (!res.ok) throw new Error("Failed to fetch image data");
-
-        const images = await res.json();
-        const matched = images.find((item) => item.id.toString() === id);
-        setImg(matched || null);
-      } catch (err) {
-        console.error("Error loading image:", err);
-        setImg(null);
-      }
-    };
-
-    fetchData();
-  }, [id]);
-
-  if (img === null) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-2xl text-red-600 font-bold">Image Not Found</h1>
-      </div>
-    );
-  }
+  const filePath = path.join(process.cwd(), 'public/Data/Image/Curosol/image.json');
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  const matched = data.find((item) => item.id.toString() === id);
 
   return (
     <Private>
-      <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-50">
-        <h1 className="text-3xl font-bold text-emerald-700 mb-4">{img.heading}</h1>
-
-        <div className="relative w-[300px] h-[400px] sm:w-[400px] sm:h-[500px] border-2 border-emerald-500 rounded-xl shadow-lg overflow-hidden">
-          <Image
-            src={img.filename}
-            alt={img.heading}
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        <p className="mt-6 text-gray-600 text-center max-w-xl">{img.summary}</p>
-      </div>
+      <ImageView img={matched || null} />
     </Private>
   );
 }
